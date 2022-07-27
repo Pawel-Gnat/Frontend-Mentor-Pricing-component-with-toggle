@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Frontend Mentor Pricing component</title>
+	<link rel="icon" type="image/png" href="./images/favicon-32x32.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="./css/style.css" />
+</head>
+
+<body>
+	<main>
+		<section>
+			<h1 class="heading">our pricing</h1>
+			<div class="price-switch">
+				<p class="price-switch__text">Annually</p>
+				<label for="priceSwitch" class="price-switch__switch">
+					<input type="checkbox" name="priceSwitch" id="priceSwitch" class="price-switch__switch--input">
+					<span class="price-switch__switch--slider"></span>
+				</label>
+				<p class="price-switch__text">Monthly</p>
+			</div>
+
+			<div class="cards">
+				<div class="price-card">
+					<p class="price-card__heading">Basic</p>
+					<div class="price-card__price">
+						<span class="price-card__price--currency">$</span>
+						<span class="price-card__price--pricing" id="basic">199.99</span>
+					</div>
+					<p class="price-card__text">500 GB Storage</p>
+					<p class="price-card__text">2 Users Allowed</p>
+					<p class="price-card__text">Send up to 3 GB</p>
+					<button class="price-card__button">learn more</button>
+				</div>
+
+				<div class="price-card">
+					<p class="price-card__heading">Professional</p>
+					<div class="price-card__price">
+						<span class="price-card__price--currency">$</span>
+						<span class="price-card__price--pricing" id="professional">249.99</span>
+					</div>
+					<p class="price-card__text">1 TB Storage</p>
+					<p class="price-card__text">5 Users Allowed</p>
+					<p class="price-card__text">Send up to 10 GB</p>
+					<button class="price-card__button">learn more</button>
+				</div>
+
+				<div class="price-card">
+					<p class="price-card__heading">Master</p>
+					<div class="price-card__price">
+						<span class="price-card__price--currency">$</span>
+						<span class="price-card__price--pricing" id="master">399.99</span>
+					</div>
+					<p class="price-card__text">2 TB Storage</p>
+					<p class="price-card__text">10 Users Allowed</p>
+					<p class="price-card__text">Send up to 20 GB</p>
+					<button class="price-card__button">learn more</button>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer>
+		<p class="footer__author">Challenge by <a href="https://www.frontendmentor.io" target="_blank"
+				rel="noopener">Frontend Mentor</a>.
+			Coded by <a href="https://github.com/Pawel-Gnat" target="_blank" rel="noopener">Paweł Gnat</a>.</p>
+	</footer>
+
+	<script src="./js/main.js"></script>
+</body>
+
+</html>

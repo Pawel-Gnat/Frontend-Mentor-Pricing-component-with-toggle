@@ -1,0 +1,195 @@
+/* VARIABLES */
+@import './colors';
+
+/* SITE */
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	min-height: 100vh;
+	margin: 7rem 2.5rem 4rem;
+	background: $very-light-grayish-blue url('../images/bg-top.svg') top -3.5rem right -20rem no-repeat;
+}
+
+/* SECTION */
+
+section {
+	text-align: center;
+	color: $dark-grayish-blue;
+}
+
+.heading {
+	font-size: 2.6rem;
+	text-transform: capitalize;
+}
+
+.price-switch {
+	font-size: 1.5rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 2.5rem;
+	margin: 4.5rem 0 8rem;
+	color: $light-grayish-blue;
+
+	&__switch {
+		position: relative;
+		width: 5.8rem;
+		height: 3.3rem;
+		border-radius: 100vmax;
+		background: linear-gradient(90deg, $linear-gradient);
+		transition: opacity 0.5s;
+		cursor: pointer;
+
+		&--input {
+			height: 0.5rem;
+			width: 0.5rem;
+			opacity: 0;
+		}
+
+		&--slider {
+			position: absolute;
+			top: 0.4rem;
+			left: 0.4rem;
+			width: 2.5rem;
+			height: 2.5rem;
+			border-radius: 50%;
+			background-color: #fff;
+			transition: transform 0.5s;
+		}
+	}
+}
+
+.price-switch__switch--input:checked + .price-switch__switch--slider {
+	transform: translate3d(2.5rem, 0, 0);
+}
+
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	gap: 3rem;
+}
+
+.price-card {
+	position: relative;
+	font-size: 1.5rem;
+	width: 35rem;
+	padding: 3rem;
+	border-radius: 1rem;
+	color: $grayish-blue;
+	background-color: #fff;
+	box-shadow: 0px 0px 24px -14px $dark-grayish-blue;
+
+	&__price {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $dark-grayish-blue;
+		padding: 2rem 0 2.5rem;
+		border-bottom: 1px solid $light-grayish-blue;
+
+		&--currency {
+			font-size: 3.8rem;
+		}
+
+		&--pricing {
+			font-size: 7rem;
+		}
+	}
+
+	&__text {
+		padding: 2rem;
+		border-bottom: 1px solid $light-grayish-blue;
+	}
+
+	&__button {
+		font-family: 'Montserrat', sans-serif;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-weight: 700;
+		width: 100%;
+		height: 4.5rem;
+		margin-top: 3.3rem;
+		border: none;
+		border-radius: 0.5rem;
+		color: #fff;
+		background: linear-gradient(90deg, $linear-gradient);
+		transition: border 0.5s, color 0.5s, background 0.5s;
+		cursor: pointer;
+	}
+}
+
+.price-card:nth-of-type(2) {
+	background: linear-gradient(135deg, $linear-gradient 120%);
+	color: #fff;
+}
+
+.price-card:nth-of-type(2) .price-card__price {
+	color: #fff;
+}
+
+.price-card:nth-of-type(2) .price-card__button {
+	color: hsl(237, 63%, 64%);
+	background: #fff;
+}
+
+footer {
+	margin-top: 2rem;
+	text-align: center;
+}
+
+/* HOVERS */
+
+.price-switch {
+	&__switch:hover {
+		opacity: 0.5;
+	}
+}
+
+.price-card {
+	&__button:hover {
+		border: 1px solid $grayish-blue;
+		color: hsl(237, 63%, 64%);
+		background: none;
+	}
+}
+
+.price-card:nth-of-type(2) .price-card__button:hover {
+	border: 1px solid #fff;
+	color: #fff;
+	background: none;
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+	body {
+		background: url('../images/bg-top.svg') top -3.5rem right -20rem no-repeat,
+			url('../images/bg-bottom.svg') bottom left no-repeat, $very-light-grayish-blue;
+	}
+}
+
+@media (min-width: 1160px) {
+	.cards {
+		gap: 0rem;
+	}
+
+	.price-card:nth-of-type(2) {
+		padding-top: 4.5rem;
+		padding-bottom: 4.5rem;
+	}
+}
